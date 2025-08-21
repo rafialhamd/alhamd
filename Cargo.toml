@@ -1,0 +1,11 @@
+[package]
+name = "alhamd"
+version = "0.1.0"
+edition = "2024"
+authors = ["Rafiudeen Chozhan Kumarasamy", "<kisans@proton.me>"]
+description = "Translation of 'Alhamdulillaah' (Praise be to God) in different languages"
+repository = "https://github.com/rafialhamd/alhamd"
+license = "MIT OR Apache-2.0"
+keywords = ["meaning", "alhamdulillaah", "alhamdulillah", "dictionary", "islam"]
+
+[dependencies]
