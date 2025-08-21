@@ -7,5 +7,6 @@ description = "Translation of 'Alhamdulillaah' (Praise be to God) in different l
 repository = "https://github.com/rafialhamd/alhamd"
 license = "MIT OR Apache-2.0"
 keywords = ["meaning", "alhamdulillaah", "alhamdulillah", "dictionary", "islam"]
+categories = ["command-line-utilities"]
 
 [dependencies]
