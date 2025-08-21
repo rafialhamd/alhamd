@@ -5,8 +5,8 @@ alhamd is short form for ‘Alhamdulillaah’ (meaning, Praise be to God). This 
 
 Run with
 
-`cargo run french`
+`$ cargo run french`
 
 OR
 
-`cargo run fr`
+`$ cargo run fr`
