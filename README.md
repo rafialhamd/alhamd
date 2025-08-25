@@ -9,4 +9,8 @@ Run with
 
 OR
 
+`$ cargo run fra`
+
+OR
+
 `$ cargo run fr`
