@@ -12,6 +12,11 @@
 //! OR
 //!
 //! ```not_rust
+//! cargo run fra
+//! ```
+//! OR
+//!
+//! ```not_rust
 //! cargo run fr
 //! ```
 
@@ -22,19 +27,31 @@ fn main() {
     let args: Vec<String> = env::args().collect();
     if args.len() >= 2 {
         let lang = &args[1];
+        let mut trans = "";
+
         match lang.as_str().to_lowercase().as_str() {
-            "ar" | "arabic" => println!("Alhamdulillaah in '{}' language: الحمد لله", lang),
-            "ta" | "tamil" => println!("Alhamdulillaah in '{}' language: எல்லாப் புகழும் இறைவனுக்கே", lang),
-            "en" | "english" => println!("Alhamdulillaah in '{}' language: Praise be to God", lang),
-            "fr" | "french" => println!("Alhamdulillaah in '{}' language: Dieu soit loué", lang),
-            _ => println!("Oh, oh! No translation found for the language: {}\n We'll add in future, as soon as possible.", lang),
+            "ar" | "ara" | "arabic" => trans = "الحمد لله",
+            "sq" | "sqi" | "albanian" => trans = "Lavdërimi i qoftë Zotit",
+            "en" | "eng" | "english" => trans = "Praise be to God",
+            "fr" | "fra" | "french" => trans = "Dieu soit loué",
+            "ga" | "gle" | "irish" => trans = "Moladh do Dhia",
+            "it" | "ita" | "italian" => trans = "Sia lodato Dio",
+            "ta" | "tam" | "tamil" => trans = "எல்லாப் புகழும் இறைவனுக்கே",
+            _ => println!(
+                ">>No translation found for the language: {lang}\n>>We'll add , as soon as possible."
+            ),
+        }
+        if trans != "" {
+            println!("Alhamdulillaah in '{}' language: {}", lang, trans);
         }
     } else {
         println!(
-            "\nYou must provide language code like 'en' or 'English' or 'fr' or 'French', etc."
+            "\nYou must provide language code like 'en' or 'eng' or 'English' or 'fr' or 'fra' or 'French', etc."
         );
         println!("Try running like: ");
         println!("$ cargo alhamd fr");
+        println!("OR");
+        println!("$ cargo alhamd fra");
         println!("OR");
         println!("$ cargo alhamd french");
     }
